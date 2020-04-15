@@ -13,33 +13,46 @@ type ProductPriceRepository interface {
 	Put(ProductPrice) error
 }
 
-// GoogleProductPriceRepository gets product prices from Google Cloud
-type GoogleProductPriceRepository struct {
+// GCPProductPriceRepository gets product prices from Google Cloud
+type GCPProductPriceRepository struct {
 	datastoreID string
-	client      *datastore.Client
+	client      DatastoreClient
 	ctx         context.Context
 }
 
-// NewGoogleProductPriceRepository creates a new GoogleProductPriceRepository
-func NewGoogleProductPriceRepository(ctx context.Context, projectID string, datastoreID string) (*GoogleProductPriceRepository, error) {
-	client, err := datastore.NewClient(ctx, projectID)
+type DatastoreClient interface {
+	Put(ctx context.Context, key *datastore.Key, src interface{}) (*datastore.Key, error)
+	Get(ctx context.Context, key *datastore.Key, dst interface{}) (err error)
+}
+
+type NewDatastoreClient func(ctx context.Context) (DatastoreClient, error)
+
+func NewGCPDatastoreClientCreator(projectID string) NewDatastoreClient {
+	return func(ctx context.Context) (DatastoreClient, error) {
+		return datastore.NewClient(ctx, projectID)
+	}
+}
+
+// NewGCPProductPriceRepository creates a new GCPProductPriceRepository
+func NewGCPProductPriceRepository(ctx context.Context, newClient NewDatastoreClient, datastoreID string) (*GCPProductPriceRepository, error) {
+	client, err := newClient(ctx)
 	if err != nil {
 		return nil, err
 	}
 
-	return &GoogleProductPriceRepository{
+	return &GCPProductPriceRepository{
 		datastoreID: datastoreID,
 		client:      client,
 		ctx:         ctx,
 	}, nil
 }
 
-func (p GoogleProductPriceRepository) keyFromProductID(productID int) string {
+func (p GCPProductPriceRepository) keyFromProductID(productID int) string {
 	return "product_" + strconv.Itoa(productID)
 }
 
 // Get fetches a product price by id
-func (p GoogleProductPriceRepository) Get(productID int) (*ProductPrice, error) {
+func (p GCPProductPriceRepository) Get(productID int) (*ProductPrice, error) {
 	key := p.keyFromProductID(productID)
 	datastoreKey := datastore.NameKey(p.datastoreID, key, nil)
 
@@ -52,7 +65,7 @@ func (p GoogleProductPriceRepository) Get(productID int) (*ProductPrice, error) 
 }
 
 // Put updates a product price
-func (p GoogleProductPriceRepository) Put(product ProductPrice) error {
+func (p GCPProductPriceRepository) Put(product ProductPrice) error {
 	key := p.keyFromProductID(product.ProductID)
 
 	// Make a key to map to datastore

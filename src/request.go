@@ -31,7 +31,8 @@ func NewRequestHandler() (RequestHandler, error) {
 
 	ctx := context.Background()
 
-	priceRepository, err := NewGoogleProductPriceRepository(ctx, projectID, datastoreID)
+	gcpDatastoreClientCreator := NewGCPDatastoreClientCreator(projectID)
+	priceRepository, err := NewGCPProductPriceRepository(ctx, gcpDatastoreClientCreator, datastoreID)
 	if err != nil {
 		return RequestHandler{}, err
 	}
