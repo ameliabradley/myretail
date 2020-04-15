@@ -30,7 +30,7 @@ gcloud config set project target-myretail-demo
 gcloud config set run/region us-central1
 ```
 
-Activate Google Cloud functions in the dashboard, as well as Google Cloud Storage. Make sure billing is enabled.
+Activate Google Cloud functions in the dashboard, as well as Google Cloud Storage and Google Datastore. Make sure billing is enabled.
 
 Activate the datastore:
 https://console.cloud.google.com/datastore/setup?project=PROJECT-NAME
