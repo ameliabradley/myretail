@@ -77,9 +77,10 @@ See errors:
 gcloud functions logs read products
 ```
 
-## Missing features
+## Missing features / TODO
 
-* Google endpoints with IAM roles to secure the PUT request that updates the product pricing information. Did not have time. Currently Google Cloud Function endpoint functionality is experimental.
+* Currently the PUT endpoint is exposed. Ideally endpoints can be managed with IAM roles. Google Cloud Function endpoint functionality is experimental, but it should be possible.
+* Abstract logging so that can be unit tested (this will also clean up unit test output)
 
 ## Credits
 
