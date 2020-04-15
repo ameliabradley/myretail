@@ -4,6 +4,11 @@
 
 This is an example retail service for fetching and storing product data.
 
+# Usage
+
+View API documentation:
+https://leebradley.github.io/myretail/
+
 # Development
 
 ## Prerequisites
@@ -55,7 +60,7 @@ Initialize terraform:
 terraform init
 ```
 
-To deploy:
+Deploy:
 
 ```
 terraform apply --var-file=YOURFILE.tfvars
