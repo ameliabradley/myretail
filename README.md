@@ -86,6 +86,7 @@ gcloud functions logs read products
 
 * Currently the PUT endpoint is exposed. Ideally endpoints can be managed with IAM roles. Google Cloud Function endpoint functionality is experimental, but it should be possible.
 * Abstract logging so that can be unit tested (this will also clean up unit test output)
+* More robust validation for currency codes and price
 
 ## Credits
 
