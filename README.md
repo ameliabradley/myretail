@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/leebradley/myretail/workflows/Go/badge.svg)](https://github.com/leebradley/myretail/actions)
+
 # Description
 
 This is an example retail service for fetching and storing product data.
