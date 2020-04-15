@@ -1,0 +1,55 @@
+{
+  "product": {
+    "available_to_promise_network": {
+      "product_id": "13860429",
+      "id_type": "TCIN",
+      "available_to_promise_quantity": 13.0,
+      "street_date": "2012-01-03T06:00:00.000Z",
+      "availability": "AVAILABLE",
+      "online_available_to_promise_quantity": 13.0,
+      "stores_available_to_promise_quantity": 0.0,
+      "availability_status": "IN_STOCK",
+      "multichannel_options": [],
+      "is_infinite_inventory": false,
+      "loyalty_availability_status": "IN_STOCK",
+      "loyalty_purchase_start_date_time": "1970-01-01T00:00:00.000Z",
+      "is_loyalty_purchase_enabled": false,
+      "is_out_of_stock_in_all_store_locations": false,
+      "is_out_of_stock_in_all_online_locations": false
+    },
+    "item": {
+      "tcin": "13860429",
+      "bundle_components": {},
+      "dpci": "058-10-3553",
+      "upc": "097368227941",
+      "product_description": {
+        "title": "SpongeBob SquarePants: SpongeBob's Frozen Face-off",
+        "bullet_description": [
+          "<B>Movie Studio:</B> Nickelodeon",
+          "<B>Movie Genre:</B> Kids and Family",
+          "<B>Run Time (minutes):</B> 88",
+          "<B>Software Format:</B> DVD"
+        ]
+      },
+      "buy_url": "https://www.target.com/p/spongebob-squarepants-spongebob-s-frozen-face-off/-/A-13860429",
+      "enrichment": {
+        "images": [
+          {
+            "base_url": "https://target.scene7.com/is/image/Target/",
+            "primary": "GUEST_fc4ec9d5-e297-4756-ad79-64139f22785e",
+            "content_labels": [
+              { "image_url": "GUEST_fc4ec9d5-e297-4756-ad79-64139f22785e" }
+            ]
+          }
+        ],
+        "sales_classification_nodes": [
+          { "node_id": "5xswu" },
+          { "node_id": "55j5v" }
+        ]
+      },
+      "return_method": "Temporary return policy: For a limited time, returns are not accepted in store. Return windows will be extended to accommodate this change. Standard return policy: This item can be returned to any Target store or Target.com.",
+      "handling": {},
+      "recall_compliance": { "is_product_recalled": false },
+      "tax_category": {
+        "tax_class": "G",
+        "tax_code_id": 99999,"tax_code":"99999"},"display_option":{"is_size_chart":false},"fulfillment":{"is_po_box_prohibited":true,"po_box_prohibited_message":"We regret that this item cannot be shipped to PO Boxes.","box_percent_filled_by_volume":0.35,"box_percent_filled_by_weight":0.38,"box_percent_filled_display":0.38},"package_dimensions":{"weight":"0.16","weight_unit_of_measure":"POUND","width":"5.34","depth":"7.48","height":"0.52","dimension_unit_of_measure":"INCH"},"environmental_segmentation":{"is_hazardous_material":false,"has_lead_disclosure":false},"manufacturer":{},"product_vendors":[{"id":"1979998","manufacturer_style":"822794","vendor_name":"Universal for PHMD PFS"},{"id":"1316256","manufacturer_style":"822794","vendor_name":"PMOUNT BY UNIVERSAL"},{"id":"1984811","manufacturer_style":"097368227941","vendor_name":"Ingram Entertainment"}],"product_classification":{"product_type":"542","product_type_name":"ELECTRONICS","item_type_name":"Movies","item_type":{"category_type":"Item Type: MMBV","type":300752,"name":"movies"}},"product_brand":{"brand":"SpongeBob","manufacturer_brand":"SpongeBob","facet_id":"4ykzg"},"item_state":"READY_FOR_LAUNCH","specifications":[],"attributes":{"gift_wrapable":"Y","has_prop65":"N","is_hazmat":"N","manufacturing_brand":"SpongeBob","max_order_qty":10,"street_date":"2012-01-03","media_format":"DVD","merch_class":"MOVIES","merch_classid":58,"merch_subclass":10,"return_method":"Temporary return policy: For a limited time, returns are not accepted in store. Return windows will be extended to accommodate this change. Standard return policy: This item can be returned to any Target store or Target.com.","ship_to_restriction":"United States Minor Outlying Islands,American Samoa (see also separate entry under AS),Puerto Rico (see also separate entry under PR),Northern Mariana Islands,Virgin Islands, U.S.,APO/FPO,Guam (see also separate entry under GU)"},"country_of_origin":"US","relationship_type_code":"Stand Alone","subscription_eligible":false,"ribbons":[],"tags":[],"ship_to_restriction":"This item cannot be shipped to the following locations: United States Minor Outlying Islands, American Samoa, Puerto Rico, Northern Mariana Islands, Virgin Islands, U.S., APO/FPO, Guam","estore_item_status_code":"A","is_cart_add_on":true,"eligibility_rules":{"add_on":{"is_active":true},"inventory_notification_to_guest_excluded":{"is_active":true}},"is_proposition_65":false,"return_policies":{"user":"Regular Guest","policyDays":"30","guestMessage":"This item must be returned within 30 days of the in-store purchase, ship date, or online order pickup. See return policy for details."},"gifting_enabled":false,"packaging":{"is_retail_ticketed":false}},"circle_offers":{"universal_offer_exists":false,"non_universal_offer_exists":true}}}
