@@ -35,7 +35,7 @@ https://console.cloud.google.com/datastore/setup?project=PROJECT-NAME
 Make sure your vendor dependencies are loaded locally:
 
 ```
-cd functions
+cd src
 go mod vendor
 ```
 
@@ -66,6 +66,7 @@ terraform apply --var-file=YOURFILE.tfvars
 Get test coverage:
 
 ```
+cd src
 go test -coverprofile cp.out
 go tool cover -html=cp.out
 ```
