@@ -52,9 +52,11 @@ func getClient() *http.Client {
 	}
 }
 
+const redskyAPI = "https://redsky.target.com/v2/pdp/tcin/%d?excludes=taxonomy,price,promotion,bulk_ship,rating_and_review_reviews,rating_and_review_statistics,question_answer_statistics"
+
 // Get fetches a product's name by id
 func (t TargetProductNameRepository) Get(productID int) (string, error) {
-	url := fmt.Sprintf("https://redsky.target.com/v2/pdp/tcin/%d?excludes=taxonomy,price,promotion,bulk_ship,rating_and_review_reviews,rating_and_review_statistics,question_answer_statistics", productID)
+	url := fmt.Sprintf(redskyAPI, productID)
 	log.Printf("Making request to %s", url)
 
 	response, err := t.httpClient.Get(url)
